@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Jupiterweb</title>
+   <link rel = icon type= "image/x-icon" href = "https://uspdigital.usp.br/comumwebdev/imagens/favicon.ico" >
+   <style>
+
+        .main-container{
+                display: flex;
+                flex-wrap: wrap;
+        }
+
+        #container-header{
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 0px;
+                
+        }
+
+       header{
+           padding: 15px;
+           width: 100vw;
+           height: 90px;
+        }
+
+        body{
+           margin: 0px;
+        }
+
+       footer{
+            text-align: center;
+        }
+        footer a{
+            color: #1094ab;
+        }
+        footer a:hover{
+            color:#64c4d0
+        }
+
+       #login{
+            margin-top: 0px;
+            margin-left: 0px;
+            padding: 1px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column; 
+            /*justify-content: flex-start; */
+            flex: 75%;
+            /*justify-content: center; Centers horizontally */
+
+        }
+
+       form{
+            margin: 0;
+            align-self: center; /* center horizontally in the flex column */
+            display: block;
+        }
+       label{
+            width: 100px;
+            display: inline-block;
+
+        }
+     
+       #sidebar{
+           padding: 1px 16px;
+           flex: 15%; 
+
+        }
+              
+        /* Style the sidenav links and the dropdown button */
+        #sidebar a, .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+        font-family: Verdana;
+        }
+
+        /* On mouse-over */
+        #sidebar a:hover, .dropdown-btn:hover {
+        color: #fcb421;
+        }
+
+        /* Add an active class to the active dropdown button */
+        .active {
+        background-color: white;
+        color: #64c4d0;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+        display: none;
+        background-color: white;
+        padding-left: 8px;
+        }
+
+
+        #usp-logo-img{
+            /*da página original*/
+            width: 122;
+            height: 49;
+            border: 0;
+            position: relative;
+            top: -3px;
+        }
+        #usp-logo-texto-img{
+            /*da página original*/
+            width: 260;
+            height: 44;
+            border: 0;
+            position: relative;
+            top: 5px;
+
+        }
+        @media screen and (max-width: 700px) {
+        #sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+            #sidebar a {
+            /*text-align: center;*/
+            float: none;
+        }
+
+        #login{margin-left: 0;}
+        }
+        @media screen and (max-width: 600px) {
+            #usp-logo-texto-img{
+                display: none;
+            }
+
+            #sidebar a {
+                /*text-align: center;*/
+                float: none;
+            }
+            #container-header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }    
+   </style>
+</head>
+
+<body>
+   <header>
+        <div id="container-header">
+            <a href="http://www.usp.br" target="_blank"><img id="usp-logo-img" src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo.png"></a>
+            <a href="http://www.usp.br" target="_blank"><img id="usp-logo-texto-img"src="https://uspdigital.usp.br/comumwebdev/imagens/cabecalho/usp-logo-texto.png"></a>      
+        </div>
+    </header>
+    <div class style="background-color: #fcb421;height:5px;width:100%;"></div>
+    <div class style="background-color: #64c4d0;height:10px;width:100%;"></div>
+    <div class style="background-color: #1094ab;height:15px;width:100%;"></div>
+   
+    <main>
+      <div class="main-container" id="container">
+            <nav>
+                <div  id = "sidebar">
+                    <div class="link-section">
+
+
+                        <h4> Público</h4>
+
+
+                        <button class="dropdown-btn">
+                            Calendário Escolar
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                                <div class="dropdown-container">
+                                    <a href="https://uspdigital.usp.br/jupiterweb/jupArquivosPublicos.jsp?tiparq=8&anoprg=2025&codmnu=7920">2025</a>
+                                    <a href="https://uspdigital.usp.br/jupiterweb/jupArquivosPublicos.jsp?tiparq=9&anoprg=2026&codmnu=6863">2026</a>
+                                </div>
+
+                        <a href="https://uspdigital.usp.br/jupiterweb/jupCarreira.jsp?codmnu=8275">Cursos de Ingresso</a>
+
+
+                        <button class="dropdown-btn">
+                            Disciplinas
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                                <div class="dropdown-container">
+                                    <a href="https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=D&codmnu=6755">Busca por Disciplinas</a>
+                                    <a href="https://uspdigital.usp.br/jupiterweb/jupDisciplinaBusca?tipo=T&codmnu=6756">Busca por Turmas</a>
+                                </div>
+
+                        <button class="dropdown-btn">
+                            Editais
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                            <div class="dropdown-container">
+                                <a href="https://uspdigital.usp.br/juno/bnfArquivosPublicos.jsp?tiparq=1&anoprg=2024&codm?codmnu=10872">PUB (2024-2025)</a>
+                                <a href="https://uspdigital.usp.br/juno/bnfArquivosPublicos.jsp?tiparq=1&anoprg=2025&codm?codmnu=11502">PUB (2024-2025)</a>
+                                <a href="http://www.prg.usp.br/?page_id=399?codmnu=6762">PEEG</a>
+                                <a href="https://prg.usp.br/programas-e-bolsas/?codmnu=10838">PAP</a>
+                            </div>
+                        
+                        <button class="dropdown-btn">
+                            Matricula Iterativa
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                            <div class="dropdown-container">
+                                <a href="https://uspdigital.usp.br/jupiterweb/FAQ.jsp?codmnu=9326">FAQ</a>
+                                <a href="https://uspdigital.usp.br/jupiterweb/grdMatriculainterativaInformacoes.jsp?codmnu=9327">Informações gerais</a>
+                                <a href="https://uspdigital.usp.br/jupiterweb/graduacaoAjudaNovaMatricula?codmnu=8946">TUTORIAL - <br> NOVA MATRÍCULA</a>
+                            </div>
+                        <button class="dropdown-btn">
+                                FAQ
+                        <i class="fa fa-caret-down"></i>
+                        </button>
+                            <div class="dropdown-container">
+                                <a href="http://www.prg.usp.br/?p=20746&codmnu=6749">Jupiterweb em Vídeos</a>
+                                <a href="http://www.prg.usp.br/?p=20741&codmnu=8063">Informações gerais <br> sobre a Graduação</a>
+                            </div>
+                        
+                    
+                         <h4>Acesso Restrito</h4>
+
+
+
+                        <a href="https://uspdigital.usp.br/jupiterweb/webLogin.jsp">Entrar</a>
+                        <a href="https://uspdigital.usp.br/jupiterweb/esqueciSenha">Esqueci a senha</a>
+                        <a href="https://uspdigital.usp.br/jupiterweb/primeiroAcesso">Primeiro Acesso</a>
+                    </div>
+                </div>
+            </nav>
+
+
+            
+            <div id="login">
+                        <h4>Login</h4>
+                        <form>
+                            <label for="Usuário">Usuário:</label>
+                            <input type="text" id="user"><br><br>
+                            <label for="Senha">Senha:  </label>
+                            <input type="password"><br><br>
+                            <input type="submit" value="Entrar">                 
+                        </form>
+              
+            </div>
+       </div>
+
+       <br><br>
+       <footer>  
+            <a href="https://uspdigital.usp.br/jupiterweb/creditos.jsp">Créditos</a> | <a href="https://uspdigital.usp.br/jupiterweb/jupColegiadoEmailLista">Fale Conosco</a> <br>
+            © 2026 - MAC0350 - Introdução ao Desenvolvimento de Sistemas de Software
+       </footer>
+
+   </main>
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content 
+- This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+/*Créditos menu dropdown: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_dropdown */
+</script>
+</body>
+</html>
