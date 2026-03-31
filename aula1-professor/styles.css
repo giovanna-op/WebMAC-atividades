@@ -1,0 +1,96 @@
+
+        body{
+            color: #e8e8e8;
+            background-color: #1c1b22;
+            margin: 0px;
+        }
+        h1,h2{
+            /*text-align: center;*/
+        font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif
+        }
+
+        /* unvisited link */
+        a:link {
+        color:  #04AA6D;
+        }
+        /* mouse over link */
+        a:hover {
+        color: #ddd;;
+        }
+        /*MENU*/
+            /* Add a black background color to the top navigation */
+        .topnav {
+        background-color: #27272a;
+        font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+        overflow: hidden;
+        margin-top: 0;
+
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        float: right;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+        /* Change the color of links on hover */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+
+        /*flex box*/
+        .main{
+            background-color: #1c1b22;
+            display: flex;
+            align-items: center;  
+            flex-direction: row; 
+            flex-wrap: wrap;
+                /*background-color: lightgray;*/
+                padding: 10px;
+               /* column-gap: 20px;*/
+
+        }
+        .colum-1-card{
+            /*/background-color: lightblue;*/
+            width: 25%;
+            
+            
+            
+        }
+        .collum-2{
+            display: flex;
+            flex-direction: column;
+            /*background-color: lightpink;*/
+            width: 75%;
+        }
+        .subbiography{
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+             /*background-color: lightgreen;*/
+             padding: 10px;
+
+        }
+
+        #img-professor{
+            width: 50%;
+            border-radius: 100%;
+        }
+        .img-container{
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+        }
+        .info{
+            margin-left: 20px;
+        }
